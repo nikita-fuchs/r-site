@@ -1,0 +1,283 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1223px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @include desktop-wide {
+    max-width: 1440px;
+    padding: 0 136px 0 131px;
+  }
+
+  @include desktop {
+    padding: 0 80px;
+  }
+
+  @include tablet {
+    max-width: 660px;
+  }
+
+  @include mobile {
+    padding: 0 30px;
+  }
+}
+
+.page-content {
+  flex-shrink: 0;
+  padding: 49px 0 110px;
+
+  @include tablet {
+    padding: 16px 0 69px;
+  }
+
+  @include mobile {
+    padding: 0 0 92px;
+  }
+}
+
+.message-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #fff;
+  padding: 150px 139px 40px;
+  display: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @include mobile {
+    padding: 30px 20px 30px;
+  }
+
+  &#team-overlay {
+    h6 {
+      span {
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 900;
+        opacity: 0.5;
+        display: block;
+        margin: 3px 0 0;
+        white-space: normal;
+
+        @include mobile-and-tablet {
+          margin: 4px 0 0;
+        }
+      }
+    }
+  }
+
+  .close-button {
+    width: 34px;
+    height: 32px;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    top: 67px;
+    right: 64px;
+
+    @include mobile-and-tablet {
+      display: block;
+      z-index: 10;
+    }
+
+    @include mobile {
+      width: 28px;
+      height: 28px;
+      top: 15px;
+      right: 17px;
+    }
+
+    span {
+      width: 24px;
+      height: 3px;
+      position: absolute;
+      top: 13px;
+      left: 5px;
+      border-radius: 1px;
+      transition: background-color 0.3s, transform 0.3s;
+      transform: scale(1.2);
+
+      @include mobile {
+        width: 18px;
+        height: 2px;
+        top: 12px;
+        left: 5px;
+      }
+
+      &:before,
+      &:after {
+        width: 24px;
+        height: 3px;
+        content: '';
+        position: absolute;
+        background-color: #31445C;
+        left: 0;
+        border-radius: 1px;
+        transition: all 0.3s;
+
+        @include mobile {
+          width: 18px;
+          height: 2px;
+        }
+      }
+
+      &:before {
+        transform: rotate(45deg);
+        top: 0;
+        left: 0;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  h6 {
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 7px 0 0;
+  }
+}
+
+.buttons-container {
+  display: inline-flex;
+  justify-content: space-between;
+
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 256px;
+  }
+
+  .btn {
+
+    @include mobile {
+      width: 100%;
+      margin: 0 auto 20px !important;
+    }
+
+    &:first-child {
+      margin: 0 30px 0 0;
+
+      @include tablet{
+        margin: 0 27px 0 0;
+      }
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.mobile-only {
+  @include mobile {
+    display: block;
+  }
+
+  @include not-mobile {
+    display: none;
+  }
+}
+
+.tablet-desktop-only {
+  @include mobile {
+    display: none;
+  }
+
+  @include not-mobile {
+    display: block;
+  }
+}
+
+html {
+  &.overlay-open {
+    overflow: hidden !important;
+  }
+}
+
+.mobile-only {
+  @include mobile {
+    display: block;
+  }
+
+  @include not-mobile {
+    display: none;
+  }
+}
+
+.tablet-only {
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  @include desktop-wide {
+    display: none;
+  }
+}
+
+.tablet-desktop-only {
+  @include mobile {
+    display: none;
+  }
+
+  @include not-mobile {
+    display: block;
+  }
+}
+
+.desktop-only {
+  @include mobile-and-tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: block;
+  }
+
+  @include desktop-wide {
+    display: none;
+  }
+}
+
+.desktop-wide-only {
+  display: none;
+
+  @include desktop-wide {
+    display: block;
+  }
+}

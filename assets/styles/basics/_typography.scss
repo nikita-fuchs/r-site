@@ -1,0 +1,28 @@
+.heading{
+  font-size: 33px;
+  line-height: 45px;
+  font-weight: 900;
+
+  @include mobile-and-tablet{
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+.blue{
+  color: #2291FF;
+}
+
+p{
+  font-size: 17px;
+  line-height: 23px;
+
+  @include mobile-and-tablet{
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &.text{
+    margin: 26px 0 0;
+  }
+}
