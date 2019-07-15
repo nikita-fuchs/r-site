@@ -2,6 +2,7 @@
 function validate_form() {
     if($('#form_accept').is(':checked')){
         $('.form').removeClass('error');
+        localStorage.setItem('re-consent', true);
         return true;
     }
     else{
