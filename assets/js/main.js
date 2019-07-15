@@ -31,7 +31,6 @@ $(window).resize(function () {
             resize_functions();
             init_delay = true
         }, 100);
-
     }
 });
 

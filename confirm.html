@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" id="page-form-html">
+<html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="shortcut icon" href="">
     <link href="/assets/styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="/assets/js/mq.genie.min.js" type="text/javascript"></script>
     <script src="/assets/js/svg4everybody.min.js" type="text/javascript"></script>
     <script src="/assets/js/fastclick.js" type="text/javascript"></script>
 
@@ -54,79 +55,51 @@
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-K57SW8P');</script>
     <!-- End Google Tag Manager -->
-
-    <!-- Yeps {literal} -->
-    <script>
-        (function (y, e, p) {
-            e.YepsID = 'KqNmzfSiaDCLobAZy';
-            var s = y.createElement('script');
-            e[p] = e[p] || function () {
-                (e[p].q = e[p].q || []).push(arguments);
-            };
-            s.async = true;
-            s.src = 'https://widget.yeps.io/yeps.js';
-            if (y.head) y.head.appendChild(s);
-        })(document, window, 'Yeps');
-    </script>
-    <!-- /Yeps {/literal} -->
-
-    <!-- cookie consent -->
-    <link rel='stylesheet' type='text/css'
-          href='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css'/>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js'></script>
-    <script>
-        window.addEventListener('load', function () {
-            window.cookieconsent.initialise({
-                'palette': {
-                    'popup': {'background': '#237afc'},
-                    'button': {
-                        'background': '#fff',
-                        'text': '#237afc'
-                    }
-                },
-                'theme': 'classic',
-                'content': {
-                    'link': 'Learn more',
-                    'href': 'https://www.risewealth.com/app/privacy'
-                }
-            });
-        });
-    </script>
 </head>
-<body id="page-form" class="page-thanks">
+<body id="page-confirm">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K57SW8P"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="main-container">
-    <div class="script-container">
-        <header>
-            <a href="index.html" class="logo"></a>
-        </header>
+<header id="main-header">
+    <div class="container">
+        <a href="index.html" class="logo"></a>
+    </div>
+</header>
+
+<div class="page-content">
+    <div class="container">
         <div class="text">
-            <span class="icon-container">
-                <img src="/assets/images/icon-form.svg">
-            </span>
-            <h2>Thanks. You’ll get an email regarding next steps.</h2>
-            <p>Thank you for your interest in the RISE STO. We will send you an email outlining the next steps of the
-                investment process.</p>
-            <div class="buttons-container">
-                <a href="/index.html" class="btn btn-blue">Back to Rise.eco</a>
+            <h1>
+                <span class="blue">Please confirm</span> that you understand that the RISE offering is for professional
+                investors only
+            </h1>
+            <p>
+                Thanks for your interest. Please note that the RISE Token Offering is targeted at European investors
+                with a minimum investment of €100k and US accredited investors only. Please confirm that you have
+                understand and accept the <a href="https://www.rise.eco/documens/RISE-Token-Disclaimer.pdf"
+                                             target="_blank">disclaimer</a> prior to visiting our website.
+            </p>
+        </div>
+
+        <div class="form">
+            <div class="input-container">
+                <input type="checkbox" id="form_accept">
+                <label for="form_accept">Yes, I understand</label>
             </div>
+
+            <a href="/" class="btn btn-blue" id="btn_proceed">Continue</a>
+
+            <p class="error-msg">Please tick the confirmation box prior to proceeding.</p>
         </div>
     </div>
-
-    <div class="partners">
-        <h3>PARTNERS & PRESS</h3>
-
-        <div class="logos-container">
-            <img class="desktop-wide-only" src="/assets/images/logo-stack2.png"
-                 srcset="/assets/images/logo-stack2@2x.png 2x, /assets/images/logo-stack2@3x.png 3x">
-        </div>
-    </div>
+    <span class="logo-watermark"></span>
 </div>
+
+<script src="/assets/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="/assets/js/main-confirm.js" type="text/javascript"></script>
 </body>
 </html>
 

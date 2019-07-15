@@ -32,10 +32,6 @@ body {
   @include tablet {
     max-width: 660px;
   }
-
-  @include mobile {
-    padding: 0 30px;
-  }
 }
 
 .page-content {
