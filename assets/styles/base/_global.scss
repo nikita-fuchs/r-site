@@ -10,15 +10,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: $dark-blue;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  
 }
 
 .container {
-  width: 100%;
+  width: 400px;
   max-width: 1223px;
   padding: 0 30px;
-  margin: 0 auto;
+  margin: 0 auto
+  align-items center;
 
   @include desktop-wide {
     max-width: 1440px;

@@ -9,11 +9,13 @@
     &.page-thanks{
       .main-container{
         .script-container{
-          align-items: flex-start;
+          align-items: center;
           padding: 218px 0 0;
+          width:20px !important;
+          height:600px;
 
           @include mobile{
-            max-width: 100%;
+            max-width: 350px;
             padding: 130px 0 0;
           }
 
@@ -83,8 +85,8 @@
     }
 
     .main-container {
-      max-width: 1440px;
-      height: 100%;
+      max-width: 480px;
+      height: 400px;
       margin: 0 auto;
       display: flex;
 
@@ -97,7 +99,7 @@
         height: 100%;
         padding: 100px 0 0;
         position: relative;
-        display: flex;
+        display: block;
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
